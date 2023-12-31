@@ -41,7 +41,18 @@ where $A$ and $B$ are constants to be fit. E.g., [another modeler](https://yurik
 
 ### Model statement
 
-
+- Data
+  - A season runs from June to June (or similar)
+  - $T_i$ average temperature on day $i$ (indexed zero to whatever)
+  - $B$ day of full flowering (this is the target)
+- Input parameters
+  - $N$ number of days to be under threshold temperature
+  - $T^\star$ threshold temperature
+  - $X^\star$ threshold number of cumulative daily degrees
+- Algorithm
+  - The *starting date* $D$ is the $N$-th day when the temperature is below $T^\star$
+  - Cumulative daily degrees $X_i$ on day $i$ is $\sum_{j=0}^i T_i$
+  - The flowering date $B$ is the first date such that $X_B \ge X^\star$
 
 ### Alternative approaches
 
