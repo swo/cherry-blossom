@@ -51,7 +51,7 @@ where $A$ and $B$ are constants to be fit. E.g., [another modeler](https://yurik
   - $X^\star$ threshold number of cumulative daily degrees
 - Algorithm
   - The *starting date* $D_s$ is the $N$-th day when the temperature is below $T^\star$
-  - Cumulative daily degrees $X_{s,i}$ on day $i \geq D_s$ is $\sum_{j=D_s}^i \max\{T_{s,i} - T_0, 0\}$
+  - Cumulative daily degrees $X_{s,i}$ on day $i \geq D_s$ is $\sum_{j={D_s}}^i \max\lbrace T_{s,i} - T_0, 0 \rbrace$
   - The flowering date $B_s$ is the first date such that $X_{s,B_s} \ge X^\star$
 - Priors and observation processes
   - $N \sim \mathrm{Unif}(5, 30)$
