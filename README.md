@@ -42,17 +42,23 @@ where $A$ and $B$ are constants to be fit. E.g., [another modeler](https://yurik
 ### Model statement
 
 - Data
-  - A season runs from June to June (or similar)
-  - $T_i$ average temperature on day $i$ (indexed zero to whatever)
-  - $B$ day of full flowering (this is the target)
-- Input parameters
+  - $T_{s,i}$ daily average temperature on day $i$ in season $s$ (a season runs, eg, from June to June), in $\degree\mathrm{C}$
+  - $B_s$ day of full flowering (this is the forecast target)
+- Model parameters
   - $N$ number of days to be under threshold temperature
+  - $T_0$ zero-growth temperature
   - $T^\star$ threshold temperature
   - $X^\star$ threshold number of cumulative daily degrees
 - Algorithm
-  - The *starting date* $D$ is the $N$-th day when the temperature is below $T^\star$
-  - Cumulative daily degrees $X_i$ on day $i$ is $\sum_{j=0}^i T_i$
-  - The flowering date $B$ is the first date such that $X_B \ge X^\star$
+  - The *starting date* $D_s$ is the $N$-th day when the temperature is below $T^\star$
+  - Cumulative daily degrees $X_{s,i}$ on day $i \geq D_s$ is $\sum_{j=D_s}^i \max\{T_{s,i} - T_0, 0\}$
+  - The flowering date $B_s$ is the first date such that $X_{s,B_s} \ge X^\star$
+- Priors and observation processes
+  - $N \sim \mathrm{Unif}(5, 30)$
+  - $T^\star \sim \mathrm{Unif}(-2.5, 5.0)$
+  - $T_0 \sim \mathrm{Unif}(-10.0, 10.0)$
+  - $X^\star \sim \mathrm{Unif}(100, 1500)$
+  - $B_s \sim \hat{B}_s + \mathrm{Unif}(-7, 7)$
 
 ### Alternative approaches
 
