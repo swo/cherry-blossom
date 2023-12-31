@@ -13,7 +13,7 @@ In this model, endodormancy ends on a certain date $D_\mathrm{me}$:
 
 $$
 D_\mathrm{me} = 136.765 - 7.689 \phi + 0.133 \phi^2 - 1.307 \ln L + 0.144 T_F + 0.285 T_F^2
-$$,
+$$
 
 where $\phi$ is the latitude ($\degree$ N), $L$ is the distance from the nearest coast (km), and $T_F$ is the average temperature during January, February, and March. Aono & Moriya Table 2 shows these values as between day of year 30 and 50, which is somewhere in February.
 
