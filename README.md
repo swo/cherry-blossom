@@ -20,7 +20,7 @@ where $\phi$ is the latitude ($\degree$ N), $L$ is the distance from the nearest
 After dormancy is over, the buds grow at a standard rate per day, when the air temperature is at a standard value. A day at a higher temperature constitutes more than one day transformed to standard temperature (DTS), and a colder day constitues less than one DTS, according to the Arrhenius equation:
 
 $$
-t_i = \exp \left\{ \frac{E_a(T_i - T_s)}{R T_i T_s} \right\},
+t_i = \exp \left\lbrace \frac{E_a(T_i - T_s)}{R T_i T_s} \right\rbrace,
 $$
 
 where $t_i$ is the DTS for day $i$, $T_i$ is the air temperature, $T_s$ is the standard temperature, and $E_a$ and $R$ are constants.
