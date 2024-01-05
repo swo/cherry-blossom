@@ -58,7 +58,8 @@ where $A$ and $B$ are constants to be fit. E.g., [another modeler](https://yurik
   - $T^\star \sim \mathrm{Unif}(-2.5, 5.0)$
   - $T_0 \sim \mathrm{Unif}(-10.0, 10.0)$
   - $X^\star \sim \mathrm{Unif}(100, 1500)$
-  - $B_s \sim \hat{B}_s + \mathrm{Unif}(-7, 7)$
+  - $\varepsilon \sim \mathrm{Unif}(-7, 7)$
+  - $B_s = \hat{B}_s + \varepsilon$
 
 ### Alternative approaches
 
